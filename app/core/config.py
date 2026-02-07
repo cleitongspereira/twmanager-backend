@@ -1,10 +1,10 @@
 import os
 
 class Settings:
-    MYSQL_HOST = os.getenv("MYSQLHOST")
-    MYSQL_PORT = os.getenv("MYSQLPORT")
-    MYSQL_USER = os.getenv("MYSQLUSER")
-    MYSQL_PASSWORD = os.getenv("MYSQLPASSWORD")
-    MYSQL_DATABASE = os.getenv("MYSQLDATABASE")
+    POSTGRES_HOST = os.getenv("PGHOST")
+    POSTGRES_PORT = os.getenv("PGPORT")
+    POSTGRES_USER = os.getenv("PGUSER")
+    POSTGRES_PASSWORD = os.getenv("PGPASSWORD")
+    POSTGRES_DB = os.getenv("PGDATABASE")
 
 settings = Settings()

@@ -3,11 +3,11 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 from app.core.config import settings
 
 DATABASE_URL = (
-    f"mysql+pymysql://{settings.MYSQL_USER}:"
-    f"{settings.MYSQL_PASSWORD}@"
-    f"{settings.MYSQL_HOST}:"
-    f"{settings.MYSQL_PORT}/"
-    f"{settings.MYSQL_DATABASE}"
+    f"postgresql+psycopg2://{settings.POSTGRES_USER}:"
+    f"{settings.POSTGRES_PASSWORD}@"
+    f"{settings.POSTGRES_HOST}:"
+    f"{settings.POSTGRES_PORT}/"
+    f"{settings.POSTGRES_DB}"
 )
 
 engine = create_engine(DATABASE_URL, pool_pre_ping=True)
