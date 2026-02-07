@@ -12,10 +12,10 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
         create_user(db, user)
         return {"message": "Usuário criado com sucesso"}
     except ValueError as e:
-    raise HTTPException(
-        status_code=status.HTTP_400_BAD_REQUEST,
-        detail=str(e),
-    )
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e),
+        )
 
 @router.post("/login", response_model=UserResponse)
 def login(data: UserLogin, db: Session = Depends(get_db)):
