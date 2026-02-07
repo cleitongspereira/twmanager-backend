@@ -12,7 +12,8 @@ def create_app() -> FastAPI:
         CORSMiddleware,
         allow_origins=[
             "http://localhost:3000",
-            "https://twmanager-frontend.up.railway.app",
+            "https://twmanager-frontend-producao.up.railway.app",
+            "https://twmanager-frontend-desenvolvimento.up.railway.app",
         ],
         allow_credentials=True,
         allow_methods=["*"],
